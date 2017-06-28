@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.css">
+	<link rel="stylesheet" href="searching.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<header>
+		<div class="brand-zone">
+			<div class="names">
+				<a href="#" class="brand">Гланис</a>
+				<a href="#" class="dom">Больницы</a>
+			</div>
+			<a href="#"><img class="logo" src="../logo_red.png" alt=""></a>
+		</div>
+
+		<div class="main-search-brd">
+			<input type="text" class="main-search" placeholder="Категория или товар…" autofocus>
+		</div>
+	</header>
+
+	<div class="cat">
+		Реанимация / Аппараты ИВЛ /
+		<div class="subcats">
+			<button class="line-all subcat und">Все</button>
+			<button class="line-opt subcat">МРТ</button>
+			<button class="line-opt subcat">КТ</button>
+		</div>
+	</div>
+
+	<div class="params">
+
+		<div class="param-cont dd-cont">
+			Скорость исследования:
+			<select class="dd" name="" id="">
+				<option value="">1 час</option>
+				<option value="">2 часа</option>
+			</select>
+		</div>
+
+		<div class="param-cont dd-cont">
+			Магнитное поле:
+			<select class="dd" name="" id="">
+				<option value="">1 час</option>
+				<option value="">2 часа</option>
+			</select>
+		</div>
+
+		<div class="param-cont">
+			<button class="line-all param und">Воздушный поток:
+			</button>
+			<button class="line-opt param">Слабый</button>
+			<button class="line-opt param">Средний</button>
+			<button class="line-opt param">Сильный</button>
+		</div>
+		<div class="param-cont dd-cont">
+			Мощность:
+			<select class="dd" name="" id="">
+				<option value="">1 час</option>
+				<option value="">2 часа</option>
+			</select>
+		</div>
+
+	</div>
+
+	<div class="price-brand">
+
+		<div class="price">
+			<div id="price-slider" class="rslider"></div>
+			<div class='price-name'>Цена</div>
+		</div>
+
+		<div class="brands">
+
+			<button class="line-all brand-sec und">
+				<img class="brand-img" src="http://placehold.it/100x100" alt="">
+				Все марки
+			</button>
+
+			<button class="line-opt brand-sec">
+				<img class="brand-img" src="http://placehold.it/100x100" alt="">
+				Bosch
+			</button>
+
+			<button class="line-opt brand-sec">
+				<img class="brand-img" src="http://placehold.it/100x100" alt="">
+				Siemens
+			</button>
+
+			<button class="line-opt brand-sec">
+				<img class="brand-img" src="http://placehold.it/100x100" alt="">
+				General Electrics
+			</button>
+
+		</div>	
+
+	</div>
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.js"></script>
+
+	<script src="switch.js"></script>
+</body>
+</html>
