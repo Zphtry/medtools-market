@@ -1,0 +1,83 @@
+* {
+  font-family: Arial; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+body {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+header {
+  margin-left: -5%;
+  padding: .3em 0 .3em 5%;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  background-color: white;
+  border-bottom: 0.3em solid #56CCF2; }
+  header .brandzone {
+    display: flex;
+    align-items: center; }
+    header .brandzone .brand-logo {
+      display: flex;
+      justify-content: space-between;
+      font: 22pt Segoe UI Semibold; }
+      header .brandzone .brand-logo .logo {
+        margin-left: .4em;
+        width: 43px;
+        height: 40px; }
+      header .brandzone .brand-logo:hover {
+        opacity: .3; }
+    header .brandzone .domain {
+      margin-left: .3em;
+      font: 1.2em Segoe UI; }
+      header .brandzone .domain:hover {
+        opacity: .3; }
+  header input {
+    outline: none !important;
+    margin: auto 1em;
+    border: solid 1px black;
+    border-radius: 30px;
+    height: 2.5em;
+    padding-left: 1em;
+    width: 50%; }
+
+.doms {
+  margin-top: 6em;
+  display: flex;
+  flex-wrap: wrap; }
+  .doms .dom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    width: 11em; }
+    .doms .dom .dom-bord {
+      margin-bottom: 1em;
+      height: 2em;
+      font-size: 16pt; }
+    .doms .dom .supcat {
+      height: 2.5em;
+      margin-bottom: .7em; }
+    .doms .dom .dom-bord,
+    .doms .dom .supcat {
+      width: 100%;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial; }
+    .doms .dom .supcat:hover,
+    .doms .dom .dom-bord:hover {
+      border: solid 1px black;
+      border-radius: 50px; }

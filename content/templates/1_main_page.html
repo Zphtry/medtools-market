@@ -1,0 +1,29 @@
+{% extends '_main_template.html' %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/1_main_page.css' %}">
+{% endblock style %}
+
+{% block logo %}
+  <img class="logo" src="{% static 'img/logo_blue.png' %}" alt="">
+{% endblock logo %}
+
+
+{% block content %}
+  <div class="doms">
+
+    {% for domain in Domain %}
+      <div class="dom">
+        <a class="dom-bord" href="{% url 'domain' domain.id %}">{{ domain }}</a>
+
+        {% for supcat in domain.supcat.all %}
+          <a class="supcat" href="{% url 'domain' domain.id %}">{{ supcat }}</a>
+        {% endfor %}
+
+      </div>
+    {% endfor %}
+
+  </div>
+{% endblock %}
+

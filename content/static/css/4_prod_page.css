@@ -1,0 +1,120 @@
+* {
+  font-family: Arial; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+body {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+header {
+  margin-left: -5%;
+  padding: .3em 0 .3em 5%;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  background-color: white;
+  border-bottom: 0.3em solid #56CCF2; }
+  header .brandzone {
+    display: flex;
+    align-items: center; }
+    header .brandzone .brand-logo {
+      display: flex;
+      justify-content: space-between;
+      font: 22pt Segoe UI Semibold; }
+      header .brandzone .brand-logo .logo {
+        margin-left: .4em;
+        width: 43px;
+        height: 40px; }
+      header .brandzone .brand-logo:hover {
+        opacity: .3; }
+    header .brandzone .domain {
+      margin-left: .3em;
+      font: 1.2em Segoe UI; }
+      header .brandzone .domain:hover {
+        opacity: .3; }
+  header input {
+    outline: none !important;
+    margin: auto 1em;
+    border: solid 1px black;
+    border-radius: 30px;
+    height: 2.5em;
+    padding-left: 1em;
+    width: 50%; }
+
+* {
+  font-family: Arial; }
+
+.cat {
+  margin: 0;
+  font-size: 1.3em;
+  display: flex;
+  white-space: nowrap;
+  align-items: flex-start;
+  margin-top: 3.7em; }
+
+.prod-brand {
+  margin-top: .5em;
+  font-size: 30pt; }
+
+.prod-model {
+  font-size: 20pt;
+  margin-top: .3em; }
+
+.tmb-wrap-table {
+  margin-top: -.5em; }
+
+.tmb-wrap-table .active {
+  border-color: #56CCF2 !important; }
+
+.tmb-wrap-table div {
+  border-color: #eee; }
+
+.container {
+  display: flex;
+  align-items: flex-start; }
+
+.imgs-props {
+  display: flex;
+  flex-direction: column; }
+
+.props {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14pt; }
+
+.props tr td {
+  border-bottom: .1em solid #56CCF2;
+  padding-bottom: .3em;
+  border-collapse: collapse; }
+
+.lst {
+  border: none !important; }
+
+.suppliers {
+  display: flex;
+  flex-wrap: wrap; }
+
+.supplier {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  margin-bottom: .5em;
+  border: solid 1px #56CCF2;
+  border-radius: 40px;
+  padding: .5em 1em .5em 1em; }
+  .supplier:hover {
+    opacity: .5; }
+
+.supplier img {
+  margin-right: .5em; }
+
+a {
+  color: black;
+  text-decoration: none; }

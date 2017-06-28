@@ -1,0 +1,117 @@
+{% extends '_domained_template.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.css">
+<link rel="stylesheet" href="{% static 'css/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/3_search_page.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+<div class="cat">
+  {{ obj.cat.supcat }} / {{ obj.cat }} /
+  <div class="subcats">
+    <button class="line-all subcat und">Все</button>
+    {% for subcat in obj.subcats %}
+    <button class="line-opt subcat">{{ subcat }}</button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="params">
+  {% for prop in obj.comm %}
+  <div class="param-cont dd-cont">
+    <select class="dd" name="" id="">
+      <option value="">{{ prop }}</option>
+      {% for value in prop.values.all %}
+      <option value="">{{ value }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="price-brand">
+
+  <div class="price">
+    <div id="price-slider" class="rslider"></div>
+    <div class='price-name'>Цена</div>
+  </div>
+
+  <div class="brands">
+
+    <button class="line-all brand-sec und">
+      <img class="brand-img" src="http://placehold.it/100x100" alt="">
+      Все марки
+    </button>
+
+    {% for brand in obj.brands %}
+    <button class="line-opt brand-sec">
+      <img class="brand-img" src="http://placehold.it/100x100" alt="">
+      {{ brand }}
+    </button>
+    {% endfor %} 
+  </div>
+</div>
+
+<div class="sort">
+  <div class="price-sort">
+    <button class="line-all price-ord sort-nomatter und">Порядок неважен</button>
+    <button class="line-opt price-ord sort-сheaper">Дешевле</button>
+    <button class="line-opt price-ord sort-expensive">Дороже</button>
+  </div>
+
+  <div class="card-view">
+    <img class="line-opt und as-cards" src="http://placehold.it/30x30">
+    <img class="line-opt as-lines" src="http://placehold.it/30x30">
+  </div>
+
+  <button class="search-by-props">Искать</button>
+</div>
+
+<div class="cards">
+
+  {% for prod in obj.prods %}
+  <a href="{% url 'prod' prod.id %}" class="card">
+
+    <span class="prd-brand-model">
+      <span class="prd-brand">{{ prod.modelprd.brand }}</span>
+      <span class="prd-model">{{ prod.modelprd }}</span>
+    </span>
+
+    <span class="thumb-item">
+      <img src="http://placehold.it/200x120">
+      <img src="http://placehold.it/200x120">
+      <img src="http://placehold.it/200x120">
+      <img src="http://placehold.it/200x120">
+      <img src="http://placehold.it/200x120">
+      <img src="http://placehold.it/200x120">
+    </span>
+
+    <div class="prd-props">
+
+      {% for propval in prod.propvalue.all %}
+      <div class="tr">
+        <span class="prd-prop-name">{{ propval.prop }}</span>
+        <span class="prd-prop">{{ propval.value }}</span>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <table class="lin-table"></table>
+
+    <span class="prd-price">{{ prod.price.first }} ₽</span>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.js"></script>
+<script src="{% static 'js/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js' %}" ></script>
+<script src="{% static 'js/script.js' %}" ></script>
+{% endblock %}

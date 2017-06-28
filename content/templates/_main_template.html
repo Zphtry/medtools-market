@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css"> 
+    {% block style %}
+    {% endblock style %}
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header data-role="header" data-position="fixed">
+
+        <div class="brandzone">
+            
+            <a href="{% url 'main' %}" class="brand-logo">Гланис
+                {% block logo %}
+                {% endblock logo %}
+            </a>
+
+            <a href="#" class="domain">
+                {% block domain %}
+                {% endblock domain %}
+            </a>
+
+        </div>
+
+
+
+        <input type="text" placeholder="Категория или товар…" autofocus>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}" ></script>
+    {% block script %}
+    {% endblock script %}
+</body>
+
+</html>

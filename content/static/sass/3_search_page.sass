@@ -1,0 +1,253 @@
+@import "main_template"
+
+.cat
+    margin-top: 3.5em
+    font-size: 1.3em
+    display: flex
+    white-space: nowrap
+    align-items: flex-start
+
+    .subcats
+        display: flex
+        align-items: flex-start
+        padding: 0
+        margin-left: .5em
+
+        .subcat
+            font-size: 1em
+            margin-right: .3em
+
+.line-all, .line-opt
+    background-color: white
+    border: 0
+    padding: 0
+    outline: none
+    opacity: .5
+
+    &:hover
+        opacity: .7
+        cursor: pointer
+
+.und
+    opacity: 1 !important
+
+.params
+    margin-top: 1em
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+
+    .param-cont
+        margin-right: .8em
+        margin-bottom: .8em
+        padding: .2em .6em .2em .6em
+        border: solid 1px #000
+        border-radius: 30px 
+        display: flex
+        align-items: center
+        height: 1.8em
+        white-space: nowrap
+
+        .dd, .param
+            font-size: 12pt
+            text-decoration: none
+
+    .dd-cont
+        align-items: center
+
+.subcats
+    height: auto
+    padding: .3em .7em .3em .7em
+
+.dd
+    appearance: none
+    border: 0
+
+.param
+    margin-right: .5em
+
+.rt
+    text-align: left
+
+.rslider 
+  display: inline-block
+  margin-top: 20px
+  margin-left: 20px
+
+.price-name
+    margin-top: -5em
+    z-index: 5
+    font-size: 16pt
+
+#price-slider
+    margin: 0
+
+#price-slider .rs-range-color,
+#price-slider .rs-path-color  
+    background-color: black
+
+#price-slider .rs-handle  
+    background-color: #56CCF2
+
+#price-slider .rs-border  
+    border-color: transparent
+
+.rs-tooltip
+    width: 90%
+    font-size: 10pt
+    white-space: nowrap 
+    padding: 0
+
+.price-brand
+    display: flex
+    align-items: flex-end
+
+    .price 
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 140px
+        height: 140px
+
+    .brands
+        margin-left: 1em;
+        display: flex;
+        align-items: flex-start;
+
+        .brand-sec
+            display: flex
+            flex-direction: column
+            align-items: center
+            font-size: 16pt
+            margin-right: 1em
+
+            .brand-img
+                margin-bottom: .3em
+
+
+.sort
+    margin-top: 1em
+    display: flex
+    align-items: center
+
+    .price-sort
+        margin-right: .5em
+
+        .price-ord
+            font-size: 14pt
+            margin-right: .5em
+
+    .card-view
+        margin-top: .3em
+
+    .search-by-props
+        height: 1.7em
+        font-size: 16pt
+        background-color: white
+        margin-left: 1em
+        border: solid 2px green
+        border-radius: 30px
+        outline: none !important
+
+        &:hover
+            opacity: .5
+
+
+.cards
+    display: flex
+    flex-wrap: wrap
+    margin-top: .5em
+    width: 100%
+
+.card
+    display: flex
+    flex-direction: column
+    align-items: center
+    border: solid 1px #000
+    padding-top: .5em
+    width: 200px
+    margin-right: 1em
+    text-decoration: none
+    color: black
+    margin-bottom: 1em
+
+.prd-brand-model
+    display: flex
+    flex-direction: column
+    align-items: center
+    white-space: nowrap
+    margin-right: 1em
+
+.prd-brand
+    font-size: 16pt
+
+.prd-model
+    font-size: 10pt
+    margin-bottom: .7em
+
+.prd-props
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-left: 5%
+    margin-right: 5%
+
+.lin-table
+    display: none
+    vertical-align: top
+    height: 100%
+
+.prd-price
+    margin-top: .5em
+    font-size: 16pt
+    font-weight: bold
+
+
+.lines
+    display: flex
+    margin-top: .5em
+    flex-direction: column
+
+.card-lin
+    display: flex
+    flex-direction: row
+    width: 100%
+    padding-top: 0
+    height: 120px
+    padding-left: 1em
+
+    .prd-brand-model
+        min-width: 15%
+
+
+.card-lin .prd-props
+    flex-direction: column
+
+
+.tmb-wrap-table
+    margin-top: -.6em
+
+
+.tmb-wrap-table .active
+    border-color: #56CCF2 !important
+
+
+.tmb-wrap-table div
+    border-color: #eee
+
+.prd-prop-name
+    display: none
+
+.prd-prop
+    margin-right: .5em
+    font-size: 12pt
+
+.thumb-item-lin
+    margin-top: .62em
+    margin-right: 2em
+
+.tbl-prop
+    padding-left: 1em
+
+.snd-col
+    padding-left: 2em

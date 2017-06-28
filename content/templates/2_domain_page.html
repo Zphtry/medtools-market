@@ -1,0 +1,34 @@
+{% extends '_domained_template.html' %}
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/2_domain_page.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+  <div class="sups">
+    
+    {% for supcat in obj.domain.supcat.all %}
+    <div class="sup">
+
+      <p class="sup-name">{{ supcat }}</p>
+
+      <div class="cats">
+
+        {% for cat in supcat.cat.all %}
+          <a href="{% url 'search' cat.id %}" class="cat">
+            <img src="http://placehold.it/100x100" class="cat-img">
+            <span class="cat-name">{{ cat }}</span>
+          </a>
+        {% endfor %}
+      
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

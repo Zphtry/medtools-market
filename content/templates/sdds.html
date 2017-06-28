@@ -1,0 +1,50 @@
+{% extends '_main_template.html' %}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/good_page.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+<div class="container content">
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'content:main' %}">{{good.subcat.cat.supercat}}</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'content:search' good.subcat.cat.id  %}">{{good.subcat.cat}}</a></li>
+    <li class="breadcrumb-item active">{{good.subcat}}</li>
+  </ol>
+  
+  <h1>{{ good.examp.brand }}</h1>
+  <h2>{{ good.examp }}</h2>
+  
+  <div class="row">
+    <div class="col-lg-6">
+      <img class="mn-img" src="{% static 'img/' %}{{good.img}}">
+    </div>
+    <div class="col-lg-6 d-flex flex-column">
+      <table class="table" cellspacing="10">
+        <tbody>
+        {% for propval in good.propvalue.all %}
+          <tr>
+            <td>{{propval.prop}}</td>
+            <td>{{propval.value}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+      {% for shop in good.price.all %}
+      <div class="dealer">
+        {# <img src="img/dealer1.png"> #}
+        <span>{{shop.shop}}</span>
+        <span class="price1">{{shop.price}} ₽</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+

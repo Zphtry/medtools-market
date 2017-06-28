@@ -1,0 +1,69 @@
+{% extends '_domained_template.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/4_prod_page.css' %}">
+{% endblock style %}
+
+{% block domain %}
+  {{ prod.subcat.cat.supcat.domain }}
+{% endblock domain %}
+
+{% block logo %}
+  <img class="logo" src="{% static 'img/' %}{{prod.subcat.cat.supcat.domain.img}}">
+{% endblock logo %}
+
+{% block content %}
+<div class="cat">
+	{{prod.subcat.cat.supcat}} / 
+	{{prod.subcat.cat}} / 
+	{{prod.subcat}}
+</div>
+
+<div class="prod-brand">{{ prod.modelprd.brand }}</div>
+
+<div class="prod-model">{{ prod.modelprd }}</div>
+
+<div class="container">
+
+	<div class="imgs-props">
+
+		<span class="thumb-item">
+			<img src="http://placehold.it/400x300">
+			<img src="http://placehold.it/400x300">
+			<img src="http://placehold.it/400x300">
+			<img src="http://placehold.it/400x300">
+			<img src="http://placehold.it/400x300">
+			<img src="http://placehold.it/400x300">
+		</span>
+
+		<table class="props">
+			{% for propval in prod.propvalue.all %}
+			<tr>
+				<td>{{propval.prop}}</td>
+				<td>{{propval.value}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+	<div class="suppliers">
+		{% for shop in prod.price.all %}
+		<a href="#" class="supplier">
+			<img src="http://placehold.it/150x50">
+			{{shop.price}} ₽
+		</a>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js' %}" ></script>
+<script>
+	$(".thumb-item").brazzersCarousel();
+</script>
+{% endblock script %}

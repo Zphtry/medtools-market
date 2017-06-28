@@ -1,0 +1,10 @@
+{% extends '_main_template.html' %}
+{% load static %}
+
+{% block domain %}
+  {{ obj.domain }}
+{% endblock domain %}
+
+{% block logo %}
+  <img class="logo" src="{% static 'img/' %}{{obj.domain.img}}">
+{% endblock logo %}
