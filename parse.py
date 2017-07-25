@@ -52,7 +52,3 @@ for gs in goods_str:
 			obj_e = Examp.objects.get_or_create(name = examp[0], brand = obj_b)[0]
 			obj_g = Good.objects.get_or_create(subcat = link.subcat, examp = obj_e)[0]
 			print(obj_g)
-
-
-
-
